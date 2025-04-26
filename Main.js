@@ -42,7 +42,7 @@ class TaskManager{
     const taskDeadLine = document.querySelector('.add-popup-deadLine-input').value;
     const taskName = document.querySelector('.add-popup-task-input').value;
     if(taskName === '' || taskDeadLine === '') {
-      alert('the task deadline and taks details are required');
+      alert('the task deadline and task details are required');
     }  
     else{
       this.tasks.push(new Task(taskID, taskName, new Date(taskDeadLine), taskState));
@@ -73,15 +73,21 @@ class TaskManager{
     };  
   };
   editTask(taskIndex){
-    this.tasks[taskIndex].name = document.querySelector('.edit-popup-task-input').value;
-    this.tasks[taskIndex].deadLine = new Date(document.querySelector('.edit-popup-deadLine-input').value);
-    this.tasks[taskIndex].state = document.querySelector('.edit-popup-state-input').value;
-    document.querySelector('.edit-popup-task-input').value = null;
-    document.querySelector('.edit-popup-deadLine-input').value = null;
-    document.querySelector('.edit-popup-state-input').value = null;
-    document.querySelector('.edit-popup-section').style.display ='none';
-    localStorage.setItem('tasks', JSON.stringify(this.tasks));
-    this.printTasks();
+    const newName = document.querySelector('.edit-popup-task-input').value;
+    if (newName === ''){
+      alert('the task details are required');
+    }
+    else{
+      this.tasks[taskIndex].name = newName;
+      this.tasks[taskIndex].deadLine = new Date(document.querySelector('.edit-popup-deadLine-input').value);
+      this.tasks[taskIndex].state = document.querySelector('.edit-popup-state-input').value;
+      document.querySelector('.edit-popup-task-input').value = null;
+      document.querySelector('.edit-popup-deadLine-input').value = null;
+      document.querySelector('.edit-popup-state-input').value = null;
+      document.querySelector('.edit-popup-section').style.display ='none';
+      localStorage.setItem('tasks', JSON.stringify(this.tasks));
+      this.printTasks();
+    }
   }
   closeEditPopup(){
     document.querySelector('.edit-popup-section').style.display ='none';
