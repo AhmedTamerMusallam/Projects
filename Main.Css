@@ -34,7 +34,6 @@ header{
 }
 .header-Add-button,
 .header-deleteAll-button,
-.header-mode-button,
 .task-delete-button,
 .task-edit-button{
   margin: 0px 15px;
@@ -57,15 +56,6 @@ header{
 .header-deleteAll-button:hover,
 .task-delete-button:hover{
   background: rgb(255, 45, 45);
-  color:white;
-  cursor: pointer;
-
-}
-.header-mode-button{
-  color: black;
-}
-.header-mode-button:hover{
-  background: black;
   color:white;
   cursor: pointer;
 
