@@ -29,7 +29,7 @@ class TaskManager{
           <td>${task.state}</td>
           <td>
             <div class="task-buttons">
-              <button class="task-delete-button">Delete</button>
+              <button class="task-delete-button" onclick="taskManager.showDeletePopup(1,${task.id});">Delete</button>
               <button class="task-edit-button" onclick="taskManager.showEditPopup(${task.id});">edit</button>
             </div>
           </td>
@@ -61,22 +61,22 @@ class TaskManager{
     document.querySelector('.add-popup-section').style.display ='none';
   };
   showEditPopup(taskID){
+    const taskIndex = this.tasks.findIndex(item => item.id === taskID);
     document.querySelector('.edit-popup-section').style.display ='flex';
-    const task = this.tasks[taskID - 1]
+    const task = this.tasks[taskIndex]
     document.querySelector('.edit-popup-task-input').value = task.name;
     document.querySelector('.edit-popup-state-input').value = task.state;
     document.querySelector('.edit-popup-deadLine-input').value = task.deadLine.toISOString().slice(0, 10);
     
     const submitButton = document.querySelector('.edit-popup-submit-button');
     submitButton.onclick = () => {
-      this.editTask(task);
+      this.editTask(taskIndex);
     };  
   };
-  editTask(task){
-    console.log(task)
-    this.tasks[task.id - 1].name = document.querySelector('.edit-popup-task-input').value;
-    this.tasks[task.id - 1].deadLine = new Date(document.querySelector('.edit-popup-deadLine-input').value);
-    this.tasks[task.id - 1].state = document.querySelector('.edit-popup-state-input').value;
+  editTask(taskIndex){
+    this.tasks[taskIndex].name = document.querySelector('.edit-popup-task-input').value;
+    this.tasks[taskIndex].deadLine = new Date(document.querySelector('.edit-popup-deadLine-input').value);
+    this.tasks[taskIndex].state = document.querySelector('.edit-popup-state-input').value;
     document.querySelector('.edit-popup-task-input').value = null;
     document.querySelector('.edit-popup-deadLine-input').value = null;
     document.querySelector('.edit-popup-state-input').value = null;
@@ -86,7 +86,30 @@ class TaskManager{
   closeEditPopup(){
     document.querySelector('.edit-popup-section').style.display ='none';
   };
+  showDeletePopup(taskNumber , taskID = ''){
+    const taskIndex = this.tasks.findIndex(item => item.id === taskID);
+    document.querySelector('.delete-popup-section').style.display ='flex';
+    document.querySelector('.delete-popup-message').innerHTML=`Are You Sure That You Want to Delete ${taskNumber} of tasks!`
+    const submitButton = document.querySelector('.delete-popup-submit-button');
+    submitButton.onclick = () => {
+      this.deleteTask(taskIndex);
+    };  
+  }
+  deleteTask(taskindex = ''){
+    document.querySelector('.delete-popup-section').style.display ='none';
+    if (taskindex === -1 || taskindex === '') {
+      this.tasks.splice(0, this.tasks.length);
+    }
+    else{
+      this.tasks.splice(taskindex, 1);
+    };
+    this.printTasks();
+  }
+  closeDeletePopup(){
+    document.querySelector('.delete-popup-section').style.display ='none';
+  }
 };
 
 const taskManager = new TaskManager();
 taskManager.printTasks();
+

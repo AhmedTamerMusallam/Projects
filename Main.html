@@ -17,7 +17,7 @@
     <div class="header-right-section">
       <div><button class="header-mode-button">Dark mode</button></div>
       <div><button class="header-Add-button" onclick="taskManager.showAddPopup();" >Add Task</button></div>
-      <div><button class="header-deleteAll-button">Delete All</button></div>
+      <div><button class="header-deleteAll-button" onclick="taskManager.showDeletePopup(`${taskManager.tasks.length}`);" >Delete All</button></div>
     </div>
   </header>
   <div class="tasks-table-section">
@@ -54,6 +54,14 @@
         <option value="Done">Done</option>
       </select>
       <button class="edit-popup-submit-button" onclick="taskManager.editTask();">submit</button>
+    </div>
+  </div>
+  <div class="delete-popup-section">
+    <div class="delete-popup">
+      <button class="popup-close-button" onclick="taskManager.closeDeletePopup();"><img src="Assets/close.png" class="popup-close-img"  alt=""></button>
+      <p class="delete-popup-title">DELETE TASKS</p>
+      <p class="delete-popup-message"></p>
+      <button class="delete-popup-submit-button" onclick="taskManager.deleteTask();">Sure!</button>
     </div>
   </div>
   <script src="Main.js"></script>
