@@ -5,7 +5,7 @@ body{
   padding-top: 100px;
 }
 header{
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(78, 78, 78);
   position: fixed;
   top: 0;
   right: 0;
@@ -142,7 +142,7 @@ th:nth-child(2), td:nth-child(2) {
   padding: 0px 10px ;
 }
 .add-popup-section{
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;

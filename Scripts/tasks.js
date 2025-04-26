@@ -40,14 +40,22 @@ class TaskManager{
   };
   addTask(){
     const taskID = this.tasks.length + 1;
-    const taskName = document.querySelector('.popup-task-input').value;
-    const taskDeadLine = document.querySelector('.popup-deadLine-input').value;
     const taskState = 'In Progress';
-    this.tasks.push(new Task(taskID,taskName,taskDeadLine,taskState))
-    document.querySelector('.add-popup-section').style.display ='none';
+    const taskDeadLine = document.querySelector('.popup-deadLine-input').value;
+    const taskName = document.querySelector('.popup-task-input').value;
+    if(taskName === '' || taskDeadLine === '') {
+      alert('the task deadline and taks details are required');
+    }  
+    else{
+      this.tasks.push(new Task(taskID,taskName,taskDeadLine,taskState)); 
+      document.querySelector('.add-popup-section').style.display ='none';
+      document.querySelector('.popup-deadLine-input').value = '';
+      document.querySelector('.popup-task-input').value= '';
+    }
     this.printTasks();
   };
   showAddPopup(){
+    document.querySelector('.popup-title').innerHTML = 'ADD Task'
     document.querySelector('.add-popup-section').style.display ='flex';
   }
 };
