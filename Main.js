@@ -55,9 +55,11 @@ class TaskManager{
     this.printTasks();
   };
   showAddPopup(){
-    document.querySelector('.popup-title').innerHTML = 'ADD Task'
     document.querySelector('.add-popup-section').style.display ='flex';
-  }
+  };
+  closeAddPopup(){
+    document.querySelector('.add-popup-section').style.display ='none';
+  };
 };
 
 const taskManager = new TaskManager();
