@@ -47,7 +47,7 @@ class TaskManager{
       alert('the task deadline and taks details are required');
     }  
     else{
-      this.tasks.push(new Task(taskID,taskName,taskDeadLine,taskState)); 
+      this.tasks.push(new Task(taskID, taskName, new Date(taskDeadLine), taskState));
       document.querySelector('.add-popup-section').style.display ='none';
       document.querySelector('.add-popup-deadLine-input').value = '';
       document.querySelector('.add-popup-task-input').value= '';
