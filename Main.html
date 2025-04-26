@@ -38,8 +38,8 @@
     <div class="add-popup">
       <button class="popup-close-button" onclick="taskManager.closeAddPopup();"><img src="Assets/close.png" class="popup-close-img"  alt=""></button>
       <p class="add-popup-title">ADD TASK</p>
-      <textarea placeholder="Type the Task details here" class="popup-task-input" required></textarea>
-      <input type="date" placeholder="enter the task dead line" class="popup-deadLine-input" required>
+      <textarea placeholder="Type the Task details here" class="popup-task-input add-popup-task-input" required></textarea>
+      <input type="date" placeholder="enter the task dead line" class="popup-deadLine-input add-popup-deadLine-input" required>
       <button class="add-popup-submit-button" onclick="taskManager.addTask();">submit</button>
     </div>
   </div>
@@ -47,9 +47,13 @@
     <div class="edit-popup">
       <button class="popup-close-button" onclick="taskManager.closeEditPopup();"><img src="Assets/close.png" class="popup-close-img"  alt=""></button>
       <p class="edit-popup-title">Edit the TASK</p>
-      <textarea placeholder="Type the Task details here" class="popup-task-input"></textarea>
-      <input type="date" placeholder="enter the task dead line" class="popup-deadLine-input">
-      <button class="edit-popup-submit-button" onclick="taskManager.addTask();">submit</button>
+      <textarea placeholder="Type the Task details here" class="popup-task-input edit-popup-task-input"></textarea>
+      <input type="date" placeholder="enter the task dead line" class="popup-deadLine-input edit-popup-deadLine-input">
+      <select class="popup-state-input edit-popup-state-input" placeholder="chose the state" >
+        <option value="In Progress">In Progress</option>
+        <option value="Done">Done</option>
+      </select>
+      <button class="edit-popup-submit-button" onclick="taskManager.editTask();">submit</button>
     </div>
   </div>
   <script src="Main.js"></script>
