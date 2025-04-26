@@ -1,0 +1,68 @@
+*{
+  box-sizing: border-box;
+}
+header{
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-title{
+  color: white;
+  font-family: roboto , arial;
+  font-weight: bold;
+  font-size: 26px;
+}
+.header-lift-section{
+  margin-left: 24px;
+}
+.header-right-section{
+  margin-right: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header-Add-button,
+.header-deleteAll-button,
+.header-mode-button{
+  margin: 0px 15px;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: all ease 0.5s;
+  background-color: white;
+}
+.header-Add-button{
+  color:rgb(53, 255, 53);
+}
+.header-deleteAll-button{
+  color: rgb(255, 45, 45);
+}
+.header-deleteAll-button:hover{
+  background: rgb(255, 45, 45);
+  color:white;
+  cursor: pointer;
+
+}
+.header-mode-button{
+  color: black;
+}
+.header-mode-button:hover{
+  background: black;
+  color:white;
+  cursor: pointer;
+
+}
+.header-Add-button:hover{
+  background: rgb(53, 255, 53);
+  color:white;
+  cursor: pointer;
+}
