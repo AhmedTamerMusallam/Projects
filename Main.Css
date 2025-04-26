@@ -40,6 +40,7 @@ header{
   border-radius: 5px;
   transition: all ease 0.5s;
   background-color: white;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
 }
 .header-Add-button{
   color:rgb(53, 255, 53);
