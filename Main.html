@@ -37,10 +37,19 @@
   <div class="add-popup-section">
     <div class="add-popup">
       <button class="popup-close-button" onclick="taskManager.closeAddPopup();"><img src="Assets/close.png" class="popup-close-img"  alt=""></button>
-      <p class="popup-title">ADD TASK</p>
+      <p class="add-popup-title">ADD TASK</p>
       <textarea placeholder="Type the Task details here" class="popup-task-input" required></textarea>
       <input type="date" placeholder="enter the task dead line" class="popup-deadLine-input" required>
-      <button class="popup-submit-button" onclick="taskManager.addTask();">submit</button>
+      <button class="add-popup-submit-button" onclick="taskManager.addTask();">submit</button>
+    </div>
+  </div>
+  <div class="edit-popup-section">
+    <div class="edit-popup">
+      <button class="popup-close-button" onclick="taskManager.closeEditPopup();"><img src="Assets/close.png" class="popup-close-img"  alt=""></button>
+      <p class="edit-popup-title">Edit the TASK</p>
+      <textarea placeholder="Type the Task details here" class="popup-task-input"></textarea>
+      <input type="date" placeholder="enter the task dead line" class="popup-deadLine-input">
+      <button class="edit-popup-submit-button" onclick="taskManager.addTask();">submit</button>
     </div>
   </div>
   <script src="Main.js"></script>

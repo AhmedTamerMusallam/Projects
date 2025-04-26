@@ -30,7 +30,7 @@ class TaskManager{
           <td>
             <div class="task-buttons">
               <button class="task-delete-button">Delete</button>
-              <button class="task-edit-button">edit</button>
+              <button class="task-edit-button" onclick="taskManager.showEditPopup();">edit</button>
             </div>
           </td>
         </tr>
@@ -59,6 +59,12 @@ class TaskManager{
   };
   closeAddPopup(){
     document.querySelector('.add-popup-section').style.display ='none';
+  };
+  showEditPopup(){
+    document.querySelector('.edit-popup-section').style.display ='flex';
+  };
+  closeEditPopup(){
+    document.querySelector('.edit-popup-section').style.display ='none';
   };
 };
 

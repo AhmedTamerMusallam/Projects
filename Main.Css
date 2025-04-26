@@ -141,19 +141,26 @@ th:nth-child(2), td:nth-child(2) {
   width: auto;
   padding: 0px 10px ;
 }
-.add-popup-section{
+.add-popup-section,
+.edit-popup-section{
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left:0;
   background-color: rgba(0,0,0,0.5);
-  display: none;
   justify-content: center;
   align-items: center;
   z-index: 200;
 }
-.add-popup{
+.add-popup-section{
+  display: none;
+}
+.edit-popup-section{
+  display: none;
+}
+.add-popup,
+.edit-popup{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -161,14 +168,24 @@ th:nth-child(2), td:nth-child(2) {
   background-color: white;
   height: 300px;
   width: 400px;
-  border: 4px solid rgb(21, 130, 255);
   border-radius: 10px;
   position: relative;
 }
-.popup-title{
+.add-popup{
+  border: 4px solid rgb(21, 130, 255);
+}
+.edit-popup{
+  border: 4px solid rgb(255, 153, 0);
+}
+.add-popup-title{
   font-family: roboto;
   font-size: 26px;
   color: rgb(21, 130, 255);
+}
+.edit-popup-title{
+  font-family: roboto;
+  font-size: 26px;
+  color: rgb(255, 153, 0);
 }
 .popup-task-input{
   border: 2px solid black;
@@ -186,19 +203,29 @@ th:nth-child(2), td:nth-child(2) {
   height: 30px;
   padding-left: 10px;
 }
-.popup-submit-button{
+.add-popup-submit-button,
+.edit-popup-submit-button{
   color: white;
   font-family: roboto;
   font-size: 16px;
   font-weight: bold;
-  background-color: rgb(21, 130, 255);
   border: none;
   box-shadow: 5px 5px 5px 3px rgba(0,0,0,0.2);
   border-radius: 3px;
   padding: 5px 20px;
   transition: all ease 0.5s;
 }
-.popup-submit-button:hover{
+.add-popup-submit-button{
+  background-color: rgb(21, 130, 255);
+}
+.edit-popup-submit-button{
+  background-color: rgb(255, 153, 0);
+}
+.edit-popup-submit-button:hover{
+  color: rgb(255, 153, 0);
+  background-color: white;
+}
+.add-popup-submit-button:hover{
   color: rgb(21, 130, 255);
   background-color: white;
 }
