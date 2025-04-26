@@ -13,21 +13,12 @@ class Task {
 
 class TaskManager{
   constructor(){
-    this.tasks = [{
-      id : 1,
-      name : 'task 1',
-      deadLine : '20-4-2055',
-      state : 'In Progress'
-    },
-    {
-      id : 2,
-      name : 'task 2',
-      deadLine : '22-4-2055',
-      state : 'Done'
-    },
+    this.tasks = [
+      new Task(1, 'task 1', '20-4-2055', 'In Progress'),
+      new Task(2, 'task 2', '22-4-2055', 'Done')
   ]
   };
-  printTask() {
+  printTasks() {
     let tasksHTML = ``;
     this.tasks.forEach(task => {
       tasksHTML += `        
@@ -46,8 +37,20 @@ class TaskManager{
       `
     });
     document.querySelector('.js-table-body').innerHTML = tasksHTML;
+  };
+  addTask(){
+    const taskID = this.tasks.length + 1;
+    const taskName = document.querySelector('.popup-task-input').value;
+    const taskDeadLine = document.querySelector('.popup-deadLine-input').value;
+    const taskState = 'In Progress';
+    this.tasks.push(new Task(taskID,taskName,taskDeadLine,taskState))
+    document.querySelector('.add-popup-section').style.display ='none';
+    this.printTasks();
+  };
+  showAddPopup(){
+    document.querySelector('.add-popup-section').style.display ='flex';
   }
 };
 
 const taskManager = new TaskManager();
-taskManager.printTask();
+taskManager.printTasks();
