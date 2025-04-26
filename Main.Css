@@ -1,6 +1,9 @@
 *{
   box-sizing: border-box;
 }
+body{
+  padding-top: 100px;
+}
 header{
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
@@ -31,7 +34,9 @@ header{
 }
 .header-Add-button,
 .header-deleteAll-button,
-.header-mode-button{
+.header-mode-button,
+.task-delete-button,
+.task-edit-button{
   margin: 0px 15px;
   padding: 5px 10px;
   font-size: 20px;
@@ -45,10 +50,12 @@ header{
 .header-Add-button{
   color:rgb(53, 255, 53);
 }
-.header-deleteAll-button{
+.header-deleteAll-button,
+.task-delete-button{
   color: rgb(255, 45, 45);
 }
-.header-deleteAll-button:hover{
+.header-deleteAll-button:hover,
+.task-delete-button:hover{
   background: rgb(255, 45, 45);
   color:white;
   cursor: pointer;
@@ -67,4 +74,49 @@ header{
   background: rgb(53, 255, 53);
   color:white;
   cursor: pointer;
+}
+.task-buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+}
+.task-edit-button{
+  color: rgb(255, 153, 0);
+  box-shadow: 5px 5px 5px 3px rgba(0,0,0,0.2);
+  margin-top: 10px;
+  font-size: 16px;
+}
+.task-delete-button{
+  font-size: 16px;
+  box-shadow: 5px 5px 5px 3px rgba(0,0,0,0.2);
+}
+.task-edit-button:hover{
+  background: rgb(255, 153, 0);
+  color:white;
+  cursor: pointer;
+}
+.tasks-table-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.tasks-table{
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+td , th{
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  text-align: center; 
+  font-family: roboto;
+}
+th{
+  background-color: rgba(65, 65, 65, 0.7);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 5px;
 }
