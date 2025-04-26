@@ -65,14 +65,27 @@ class TaskManager{
     const task = this.tasks[taskID - 1]
     document.querySelector('.edit-popup-task-input').value = task.name;
     document.querySelector('.edit-popup-state-input').value = task.state;
-    document.querySelector('.edit-popup-deadLine-input').value = task.deadLine.toISOString().slice(0, 10);  
+    document.querySelector('.edit-popup-deadLine-input').value = task.deadLine.toISOString().slice(0, 10);
+    
+    const submitButton = document.querySelector('.edit-popup-submit-button');
+    submitButton.onclick = () => {
+      this.editTask(task);
+    };  
   };
+  editTask(task){
+    console.log(task)
+    this.tasks[task.id - 1].name = document.querySelector('.edit-popup-task-input').value;
+    this.tasks[task.id - 1].deadLine = new Date(document.querySelector('.edit-popup-deadLine-input').value);
+    this.tasks[task.id - 1].state = document.querySelector('.edit-popup-state-input').value;
+    document.querySelector('.edit-popup-task-input').value = null;
+    document.querySelector('.edit-popup-deadLine-input').value = null;
+    document.querySelector('.edit-popup-state-input').value = null;
+    document.querySelector('.edit-popup-section').style.display ='none';
+    this.printTasks();
+  }
   closeEditPopup(){
     document.querySelector('.edit-popup-section').style.display ='none';
   };
-  editTask(){
-
-  }
 };
 
 const taskManager = new TaskManager();
