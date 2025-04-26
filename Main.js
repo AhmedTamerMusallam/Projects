@@ -13,10 +13,8 @@ class Task {
 
 class TaskManager{
   constructor(){
-    this.tasks = [
-      new Task(1, 'task 1', new Date('2055-04-20'), 'In Progress'),
-      new Task(2, 'task 2', new Date('2055-04-22'), 'Done')
-  ]
+    const tasksFromStorage = JSON.parse(localStorage.getItem('tasks')) || [];
+    this.tasks = tasksFromStorage.map(task => new Task(task.id, task.name, new Date(task.deadLine), task.state));
   };
   printTasks() {
     let tasksHTML = ``;
@@ -52,6 +50,7 @@ class TaskManager{
       document.querySelector('.add-popup-deadLine-input').value = '';
       document.querySelector('.add-popup-task-input').value= '';
     }
+    localStorage.setItem('tasks', JSON.stringify(this.tasks));
     this.printTasks();
   };
   showAddPopup(){
@@ -81,6 +80,7 @@ class TaskManager{
     document.querySelector('.edit-popup-deadLine-input').value = null;
     document.querySelector('.edit-popup-state-input').value = null;
     document.querySelector('.edit-popup-section').style.display ='none';
+    localStorage.setItem('tasks', JSON.stringify(this.tasks));
     this.printTasks();
   }
   closeEditPopup(){
@@ -103,6 +103,7 @@ class TaskManager{
     else{
       this.tasks.splice(taskindex, 1);
     };
+    localStorage.setItem('tasks', JSON.stringify(this.tasks));
     this.printTasks();
   }
   closeDeletePopup(){
