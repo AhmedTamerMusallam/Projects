@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cv</title>
+  <link rel="stylesheet" href="final_project.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <div class="left-section">
+      <div class="name">Ahmed T. Musallam</div>
+      <div class="email">
+        <img src="assest/email.png" class="icon" alt="">
+        ahmedtamermusallam@gmail.com</div>
+        <div class="number">
+        <img src="assest/phone-call.png" class="icon" alt="">
+        0123456789</div>
+    </div>
+    <div class="right-section">
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#Recommendations">Recommendations</a>
+    </div>
+</div>
+<div class="body-section">
+  <div class="main-section" id="about">
+    <div class="main-img-section">
+      <img src="assest/coding.png" class="main-img" alt="">
+    </div>
+    <div class="main-text-section">
+      <div class="main-text">
+        <h1 class="section-title">Hi, I'm Ahmed Musallam!</h1>
+      </div>
+      <div>
+        <p class="info">I am a full stack developer with 4 years of experience in both frontend and backend development. I specialize in building responsive web applications using modern JavaScript frameworks. My expertise includes cloud deployment, API development, and creating seamless user experiences.</p>
+      </div>
+    </div>
+  </div>
+  <div class="skills-section" id="skills">
+    <div>
+      <h1 class="section-title">Skills :</h1>
+    </div>
+    <div class="skills-grid-section">
+      <div class="skill-item">
+        <img src="assest/html-5.png" class="skill-img" alt="">
+        HTML
+      </div>
+      <div class="skill-item">
+        <img src="assest/css-3.png" class="skill-img" alt="">
+        CSS
+      </div>
+      <div class="skill-item">
+        <img src="assest/js.png" class="skill-img" alt="">
+        JavaScript
+      </div>
+      <div class="skill-item">
+        <img src="assest/code.png" class="skill-img" alt="">
+        clean code
+      </div>
+      <div class="skill-item">
+        <img src="assest/git.png" class="skill-img" alt="">
+        Git & GitHup
+      </div>
+    </div>
+  </div>
+  <div class="project-section" id="projects">
+    <div>
+      <h1 class="section-title">Project :</h1>
+    </div>
+    <div>
+      <h3>Video Streaming Platform</h3>
+      <ul>
+        <li>Built a Netflix-like streaming service with HTML, CSS and JavaScript</li>
+        <li>The platform allows users to watch a variety of videos seamlessly, with a user-friendly interface for easy browsing and playback.</li>
+        <li>Responsive Web Disgin</li>      
+      </ul>
+    </div>
+    <div>
+      <h3>To Do list</h3>
+      <ul>
+        <li>Built a ToDo List service with HTML, CSS and JavaScript</li>
+        <li>Responsive Web Disgin</li>    
+        <li>The To-Do List application enables users to add, edit, and remove tasks, offering a simple and effective way to manage their daily responsibilities.</li>
+        <li>It features a responsive layout, making it accessible and easy to use on both small and large screens, with real-time updates on task status.</li>  
+      </ul>
+    </div>
+  </div>
+  <div class="recommendations-section" id="Recommendations">
+    <div>
+      <h1 class="section-title">Recommendations :</h1>
+    </div>
+    <div>
+      <div class="recommendation-grid-section">
+      </div>
+  
+    </div>
+  </div>
+  <div class="leave-recommendation-section">
+    <div>
+      <div><h3 class="section-title">leave Recommendation</h3></div>
+      <div><input type="text" placeholder="Name (optional)" class="recommendation-name-input"></div>
+      <textarea class="recommendation-input" rows="5" placeholder="Your Recommendation" required></textarea>
+    </div>
+    <button class="submet-button" onclick="showPopup(); addrecommendation();">Submit</button>
+  </div>
+</div>
+<div class="popup js-popup">
+  <div class="popup-content">
+    <p>Thank you for submitting a recommendation!</p>
+    <button class="submet-button" onclick="unShowPopup()"> OK! </button>
+  </div>
+</div>
+<div class="home-button">
+  <a href="#about"><img src="assest/up-arrow.png" class="home-button-img"></a>
+</div>
+<script src="final_project.js"></script>
+</body>
+</html>
