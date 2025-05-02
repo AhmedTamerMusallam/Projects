@@ -52,18 +52,18 @@ a{
   background-color: #15a076;
 }
 /*Header Start*/
-header{
+#home{
   background-color: var(--bg-primary);
   height: 100vh;
 }
-header .navbar{
+#home .navbar{
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   position: fixed;
   width: 100%;
   z-index: 100;
 }
-header .navbar nav{
+#home .navbar nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,17 +76,17 @@ header .navbar nav{
   font-size: 24px;
   font-weight: 600;
 }
-header .navbar nav ul{
+#home .navbar nav ul{
   display:flex;
   justify-content: center;
   align-items: center;
 }
-header .navbar nav ul a{
+#home .navbar nav ul a{
   margin: 0 15px;
   color: var(--primary-color);
   font-weight: 600;
 }
-header .header-content{
+#home .header-content{
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   align-items: center;
@@ -95,7 +95,7 @@ header .header-content{
   padding: 5rem 2rem 0;
   height: 100%;
 }
-header .header-content .content-text{
+#home .header-content .content-text{
   margin-bottom: 5rem;
 }
 
@@ -130,7 +130,7 @@ header .header-content .content-text{
 #home .header-content .social a i:hover{
   transform: scale(0.85);
 }
-header .header-content img {
+#home .header-content img {
   max-width: 450px;
   border-radius: 50px;
 }
@@ -293,3 +293,86 @@ margin-bottom: 20px;
   padding: 1rem 0;
 }
 /* footer end */
+/* Responsiveness */
+@media (max-width: 1068px) {
+  #home .header-content h1{
+    font-size: 50px;
+  }
+}
+/* Responsiveness */
+/* Tablet Responsiveness */
+
+@media (max-width: 980px) {
+  #about,
+  #skills,
+  #portfolio,
+  #contact{
+  padding: 9rem 0;
+  }
+  #home .navbar nav{
+    display: block;
+    text-align: center;
+  }
+  #home .navbar nav ul{
+    margin-top: 20px;
+  }
+  #home .navbar nav ul a{
+    margin:0 8px;
+  }
+  #home .header-content{
+    grid-template-columns: 1fr;
+  }
+  #home .header-content .content-text{
+    margin-bottom: 0rem;
+    margin-top: 5rem;
+  }
+  #home .header-content h1{
+    font-size: 50px;
+  }
+
+  #home .header-content img,
+  #contact .row img{
+    max-width: 350px;
+    margin: auto;
+  }
+  #about .about-content,
+  #contact .row{
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+  #skills .skills-content .row,
+  #portfolio .row{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* Tablet Responsiveness */
+/* Mobile Responsiveness */
+@media (max-width: 500px) {
+  #home .header-content h1{
+    font-size: 35px;
+  }
+  #home .header-content p span,
+  #home .header-content .title{
+    font-size: 16px;
+  }
+  #home  .header-content img{
+    margin-top: 2rem;
+  }
+  #about h2,
+  #skills h2,
+  #portfolio h2,
+  #contact h2{
+    font-size: 30px;
+  }
+  #skills .skills-content .row,
+  #portfolio .row{
+    grid-template-columns: 1fr;
+  }
+  #home .header-content img,
+  #contact .row img{
+    max-width: 250px;
+    margin: auto;
+  }
+}
+/* Mobile Responsiveness */
