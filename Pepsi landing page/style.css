@@ -81,6 +81,8 @@ nav ul a{
   border: 1px solid #fff;
 }
 .social{
+  display: flex;
+  flex-direction: column;
   margin-left: 3rem;
   animation: animation1 1s ease-out;
 }
@@ -114,5 +116,56 @@ nav ul a{
   }
   100%{
     transform: translateY(0px);
+  }
+}
+/* Tablet */
+@media(max-width: 900px){
+  .container{
+    margin: 0 5rem;
+  }
+  nav ul a{
+    padding: 10px;
+  }
+  #home .content{
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0 0 ;
+  }
+  #home .content .content-text p{
+    width: 100%;
+  }
+  #home .content .content-text{
+    margin-bottom: 2rem;
+  }
+  #home .content img{
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  .social{
+    margin-left: 0;
+    margin-bottom: 15px;
+    flex-direction: row;
+  }
+  .social a{
+    margin: 0 10px;
+  }
+}
+/* Mobile */
+@media(max-width: 650px){
+  nav{
+    display: block;
+  }
+  nav .logo{
+    display: block;
+    margin: 0 auto 15px;
+  }
+  nav ul{
+    justify-content: center;
+  }
+  nav ul a {
+    font-size: 12px;
+  }
+  .pepsi-types{
+    margin-top: 15px;
   }
 }
