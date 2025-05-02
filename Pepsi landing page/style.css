@@ -8,6 +8,8 @@
 
 body{
   font-family: "Roboto" ,sans-serif;
+  overflow-x: hidden ;
+  overflow-y: hidden ;
 }
 .container{
   margin: 0 7rem;
@@ -49,6 +51,7 @@ nav ul a{
 }
 #home .content img{
   width: 220px;
+  animation: animation1 1s ease-out;
 }
 #home .content .content-text h1{
   font-size: 40px;
@@ -79,6 +82,7 @@ nav ul a{
 }
 .social{
   margin-left: 3rem;
+  animation: animation1 1s ease-out;
 }
 .social i{
   color: #fff;
@@ -93,4 +97,22 @@ nav ul a{
   width: 100px;
   display: block;
   margin: auto;
+  animation: animation2 1s ease-out;
+
+}
+@keyframes animation1{
+  0%{
+    transform: translateX(500px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+@keyframes animation2{
+  0%{
+    transform: translateY(200px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
 }
