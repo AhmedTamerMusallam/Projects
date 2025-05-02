@@ -59,6 +59,7 @@ header .navbar{
   border-bottom: 1px solid #ccc;
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 header .navbar nav{
   display: flex;
@@ -282,3 +283,11 @@ margin-bottom: 20px;
 }
 
 /* contact end */ 
+/* footer start */
+#footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+/* footer end */
