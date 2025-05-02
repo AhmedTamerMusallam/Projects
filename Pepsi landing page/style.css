@@ -84,4 +84,13 @@ nav ul a{
   color: #fff;
   font-size: 25px;
   margin: 10px 0;
+  transition: all ease 0.3s;
+}
+.social i:hover{
+  color: #000;
+}
+.pepsi-types{
+  width: 100px;
+  display: block;
+  margin: auto;
 }
