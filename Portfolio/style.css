@@ -131,17 +131,20 @@ header .header-content img {
 }
 /*Header End*/
 /* About Start */
-#about{
+#about,
+#skills{
   padding: 6rem 0;
 }
-#about h2{
+#about h2,
+#skills h2{
   text-align: center;
   font-size: 38px;
   color: var(--primary-color);
   font-weight: 600;
   letter-spacing: 1px;
 }
-#about hr{
+#about hr,
+#skills hr{
   width: 100px;
   height: 3px;
   background-color: var(--secondary-color);
@@ -171,3 +174,41 @@ margin-bottom: 20px;
   border-bottom: 1px solid #ddd ;
 }
 /* About End */
+/* Skills Start */
+#skills{
+  background-color: var(--primary-color);
+}
+#skills h2{
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+#skills .skills-content{
+  margin-top: 2rem;
+  background-color: #0f272d ;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+}
+#skills .skills-content .row{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-items: center;
+  text-align: center;
+}
+#skills .skills-content .row .item{
+  color: #fff;
+  background-color:#1f3a42;
+  margin:20px;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600; 
+  transition: all 0.3s ease;
+}
+#skills .skills-content .row .item:hover{
+  transform: scale(1.05);
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+}
+#skills .row img{
+  max-width: 40px;
+}
+/* Skills End */
