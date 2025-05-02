@@ -41,7 +41,9 @@ a{
   color: #fff;
   padding: 8px 20px;
   font-size: 14px;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 .btn-primary:hover{
@@ -138,7 +140,8 @@ header .header-content img {
 }
 #about h2,
 #skills h2,
-#portfolio h2{
+#portfolio h2,
+#contact h2{
   font-family: "Poppins", sans-serif;
   text-align: center;
   font-size: 38px;
@@ -249,3 +252,33 @@ margin-bottom: 20px;
   border-top-right-radius: 5px;
 }
 /* portfolio end */
+/* contact start */
+#contact{
+  background-color: #00f4ab1f;
+  padding: 4rem 0;
+}
+#contact .row {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+  column-gap: 2rem;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+  padding: 2rem 3rem;
+  border-radius: 10px;
+}
+#contact .row input,
+#contact .row textarea{
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #00f4ab13;
+  border: 1px solid #bbb;
+  outline: none;
+}
+#contact .row img{
+  max-width: 450px;
+}
+
+/* contact end */ 
