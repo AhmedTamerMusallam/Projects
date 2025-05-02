@@ -1,0 +1,63 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+  --primary-color: #033b4a;
+  --secondary-color: #20c997;
+  --gray: #4a4a4d;
+  --bg-primary: #ecf0f3;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+}
+h1,
+h2{
+  font-family: "Saira", sans-serif;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+/*Header Start*/
+header{
+  background-color: var(--bg-primary);
+  height: 100vh;
+}
+header .navbar{
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  width: 100%;
+  padding: 1.5rem 2rem;
+}
+header .navbar nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+}
+#home #logo{
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: 600;
+}
+header .navbar nav ul{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+header .navbar nav ul a{
+  margin: 0 15px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+/*Header End*/
