@@ -12,7 +12,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body{
   font-family: "Poppins", sans-serif;
 }
@@ -136,7 +138,8 @@ header .header-content img {
 /* About Start */
 #about,
 #skills,
-#portfolio{
+#portfolio,
+#contact{
   padding: 6rem 0;
 }
 #about h2,
@@ -256,7 +259,6 @@ margin-bottom: 20px;
 /* contact start */
 #contact{
   background-color: #00f4ab1f;
-  padding: 4rem 0;
 }
 #contact .row {
   margin-top: 4rem;
